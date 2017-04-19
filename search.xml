@@ -10,9 +10,9 @@
 
     
     <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>%2F2017%2F04%2F18%2FHello-World-0%2F</url>
-      <content type="text"><![CDATA[马佳佳你好，我是你老公 哈哈 哈哈哈]]></content>
+      <title><![CDATA[解决Hexo在Git上同步问题]]></title>
+      <url>%2F2017%2F04%2F19%2F%E8%A7%A3%E5%86%B3Hexo%E5%9C%A8Git%E4%B8%8A%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98%2F</url>
+      <content type="text"><![CDATA[1. 需要的工具 node.js Git Hexo环境 2.将主体的工程发送到yourname.github.io工程的分支hexo上切换到工程文件夹，右击菜单–git bash here 1234567git init //初始本地仓库git add .git commit -m &quot;My blog hexo&quot;git branch hexo //新建一个hexo分支git checkout hexo //切换到hexo分支git remote add origin git@github.com:yourname/yourname.github.io.git //将本地与Github项目对接git push origin hexo //push到Github项目的hexo分支上 这样就可以将 hexo工程放到github了 3.其他终端现将工程clone下来 1git clone -b hexo git@github.com:yourname/yourname.github.io.git 然后在clone下来的文件夹中。右击菜单–git bash here 注意：hexo工程已经存在了不需要再进行 init了 直接 1$ npm install 如果只是更新了一片博客 只需要将source文件夹提交即可 123$ git add .$ git commit -m&quot;更新的内容&quot;$ git push origin hexo]]></content>
     </entry>
 
     
