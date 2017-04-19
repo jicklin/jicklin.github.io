@@ -75,3 +75,9 @@ deploy:
   type: git
   repository: https://github.com/jicklin/jicklin.github.io.git
   branch: master
+
+search:
+    path: search.xml
+    fileld: post
+    format: html
+    limit: 10000
