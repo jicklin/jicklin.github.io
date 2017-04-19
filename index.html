@@ -423,26 +423,23 @@
       
         
           
-            <hr>
-<p>本文添加的是Local Search</p>
-<hr>
-<ul>
-<li><h3 id="安装-hexo-generator-searchdb"><a href="#安装-hexo-generator-searchdb" class="headerlink" title="安装 hexo-generator-searchdb"></a>安装 <em>hexo-generator-searchdb</em></h3></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-searchdb --save</div></pre></td></tr></table></figure>
-<ul>
-<li><h3 id="在站点配置文件中添加字段search"><a href="#在站点配置文件中添加字段search" class="headerlink" title="在站点配置文件中添加字段search"></a>在站点配置文件中添加字段<code>search</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">search:</div><div class="line">  path: search.xml</div><div class="line">  field: post</div><div class="line">  format: html</div><div class="line">  limit: 10000</div></pre></td></tr></table></figure>
-</li>
-<li><h3 id="修改主题配置文件-next下的-config-yml"><a href="#修改主题配置文件-next下的-config-yml" class="headerlink" title="修改主题配置文件 next下的_config.yml"></a>修改主题配置文件 next下的_config.yml</h3><blockquote>
-<p>local_search的enable改为true</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># Local search</div><div class="line">local_search:</div><div class="line">  enable: true</div></pre></td></tr></table></figure>
-<p><img src="/upload/image/localsearch.jpg" alt="serach"></p>
-</li>
-</ul>
-<p>  ​</p>
-
           
+本文添加的是Local Search
+
+
+安装 hexo-generator-searchdb
+
+1$ npm install hexo-generator-searchdb --save
+
+在站点配置文件中添加字段search12345search:  path: search.xml  fie
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/19/Hexo_next加入站点内容搜索功能/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -583,26 +580,21 @@
       
         
           
-            <h2 id="1-需要的工具"><a href="#1-需要的工具" class="headerlink" title="1. 需要的工具"></a>1. 需要的工具</h2><ul>
-<li>node.js</li>
-<li>Git</li>
-<li>Hexo环境</li>
-</ul>
-<h2 id="2-将主体的工程发送到yourname-github-io工程的分支hexo上"><a href="#2-将主体的工程发送到yourname-github-io工程的分支hexo上" class="headerlink" title="2.将主体的工程发送到yourname.github.io工程的分支hexo上"></a>2.将主体的工程发送到yourname.github.io工程的分支hexo上</h2><p>切换到工程文件夹，右击菜单–<em>git bash here</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">git init //初始本地仓库</div><div class="line">git add .</div><div class="line">git commit -m &quot;My blog hexo&quot;</div><div class="line">git branch hexo //新建一个hexo分支</div><div class="line">git checkout hexo //切换到hexo分支</div><div class="line">git remote add origin git@github.com:yourname/yourname.github.io.git  //将本地与Github项目对接</div><div class="line">git push origin hexo  //push到Github项目的hexo分支上</div></pre></td></tr></table></figure>
-<p>这样就可以将 hexo工程放到github了</p>
-<h2 id="3-其他终端"><a href="#3-其他终端" class="headerlink" title="3.其他终端"></a>3.其他终端</h2><p>现将工程clone下来</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone -b hexo git@github.com:yourname/yourname.github.io.git</div></pre></td></tr></table></figure>
-<p>然后在clone下来的文件夹中。右击菜单–<em>git bash here</em></p>
-<p>注意：hexo工程已经存在了不需要再进行 init了</p>
-<p>直接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure>
-<blockquote>
-<p>如果只是更新了一片博客 只需要将source文件夹提交即可</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git add .</div><div class="line">$ git commit -m&quot;更新的内容&quot;</div><div class="line">$ git push origin hexo</div></pre></td></tr></table></figure>
+          1. 需要的工具
+node.js
+Git
+Hexo环境
 
-          
+2.将主体的工程发送到yourname.github.io工程的分支hexo上切换到工程文件夹，右击菜单–git bash here
+1234567git init //初始本地仓库git add .git commit -m &quot;M
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/19/解决Hexo在Git上同步问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
