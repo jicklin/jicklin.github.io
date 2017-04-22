@@ -2,7 +2,7 @@
 title: mysql免安装版数据库配置
 date: 2017-04-21 08:54:53
 tags:
-categories:工具安装
+categories: 工具安装
 
 ---
 

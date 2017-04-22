@@ -47,6 +47,7 @@ highlight:
 default_category: uncategorized
 category_map:
      随笔: eassying
+     工具安装: tools
 tag_map:
 
 # Date / Time format
