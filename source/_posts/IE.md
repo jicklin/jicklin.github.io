@@ -2,7 +2,7 @@
 title: JAVA下载文件IE乱码
 date: 2017-05-10 16:08:59
 tags:
-categories:
+categories: java
 ---
 
 > 今天写了一个freemaker导出word的工程，导出的文件名中有中文，比较习惯在测试时用Chrome浏览器，快要把更新发给现场了，想起来现场用的是IE浏览器，保险起见还是也测试下，一测试发现糟了乱码了。
