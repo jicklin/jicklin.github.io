@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[JAVA下载文件IE乱码]]></title>
+      <url>%2F2017%2F05%2F10%2FIE%2F</url>
+      <content type="text"><![CDATA[今天写了一个freemaker导出word的工程，导出的文件名中有中文，比较习惯在测试时用Chrome浏览器，快要把更新发给现场了，想起来现场用的是IE浏览器，保险起见还是也测试下，一测试发现糟了乱码了。有网有百度不怕，然后查查查发现了还挺多人有这个问题的，应该是由于内核不一样吧发现都是通过判断请求的头来进行浏览器判断，虽然网上有大神写出来的但是还是想自己按照步骤走一下。现在Chrome中跟踪到了请求的头在network中很容易看出来大概是这个样子1User-Agent:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36 再去IE看看呗，一看蒙蔽了，这网络中怎么不管怎么请求都是屁都看不到，纠结了，还是用工具吧，安利一款工具呀 Fiddler 跟踪请求特好用User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko 后边这个like Gecko就是关键字啦 据说老的IE还有msie这个东东程序就这样写就行啦1234567String userAgent=request.getHeader(&quot;User-Agent&quot;).toLowerCase(); //如果是IE if(userAgent.contains(&quot;msie&quot;) || userAgent.contains(&quot;like gecko&quot;))&#123; fileName= URLEncoder.encode(fileName,&quot;utf-8&quot;); &#125;else&#123; fileName=new String(fileName.getBytes(&quot;utf-8&quot;),&quot;ISO-8859-1&quot;); &#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[mysql免安装版数据库配置]]></title>
+      <url>%2F2017%2F04%2F21%2Fmysql%2F</url>
+      <content type="text"><![CDATA[1.下载Mysql传送门：http://dev.mysql.com/downloads/mysql/ 2.环境配置]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Hexo_next加入站点内容搜索功能]]></title>
       <url>%2F2017%2F04%2F19%2FHexo_next%E5%8A%A0%E5%85%A5%E7%AB%99%E7%82%B9%E5%86%85%E5%AE%B9%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%2F</url>
       <content type="text"><![CDATA[本文添加的是Local Search 安装 hexo-generator-searchdb 1$ npm install hexo-generator-searchdb --save 在站点配置文件中添加字段search12345search: path: search.xml field: post format: html limit: 10000 修改主题配置文件 next下的_config.yml local_search的enable改为true 123# Local searchlocal_search: enable: true ​]]></content>
